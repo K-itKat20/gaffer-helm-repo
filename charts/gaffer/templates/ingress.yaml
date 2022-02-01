@@ -29,6 +29,9 @@ metadata:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
+  tlsSecurityProfile:
+    old: {}
+    type: Old
   rules:
   - http:
       paths:
