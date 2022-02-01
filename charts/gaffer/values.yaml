@@ -59,11 +59,11 @@ api:
     pullSecrets: []
   resources:
     requests:
-      memory: "300Mi"
-      cpu: "500m"
+      memory: "700Mi"
+      cpu: "700m"
     limits:
-      memory: "300Mi"
-      cpu: "500m"
+      memory: "700Mi"
+      cpu: "700m"
   nodeSelector: {}
   tolerations: []
   affinity: {}
