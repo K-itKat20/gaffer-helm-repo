@@ -9,8 +9,6 @@ spec:
     kind: Service
     name: { include "gaffer.fullname" . }}-ui
     weight: 100
-  port:
-    targetPort: 80
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
