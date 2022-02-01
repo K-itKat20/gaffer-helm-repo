@@ -30,8 +30,8 @@ metadata:
   {{- end }}
 spec:
   tlsSecurityProfile:
-    old: {}
-    type: Old
+    intermediate: {}
+    type: Intermediate
   rules:
   - http:
       paths:
