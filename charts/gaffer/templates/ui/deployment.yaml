@@ -54,6 +54,12 @@ spec:
           httpGet:
             path: /ui/#!/graph
             port: http
+        startupProbe:
+         httpGet:
+           path: /ui/
+           port: http
+         failureThreshold: 30
+         periodSeconds: 10
         resources:
           {{- toYaml .Values.ui.resources | nindent 10 }}
       {{- with .Values.ui.affinity }}
