@@ -7,8 +7,10 @@ metadata:
 spec:
   to:
     kind: Service
-    name: { include "gaffer.fullname" . }}-ui
+    name: {{ include "gaffer.fullname" . }}-ui
     weight: 100
+  port:
+    targetPort: http
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
