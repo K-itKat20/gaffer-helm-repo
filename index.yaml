@@ -1,0 +1,75 @@
+apiVersion: v1
+entries:
+  accumulo:
+  - apiVersion: v2
+    appVersion: 1.9.3
+    created: "2022-02-01T10:05:59.86904531Z"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.helm.sh/incubator/
+      version: 2.1.5
+    - condition: hdfs.enabled
+      name: hdfs
+      repository: file://../hdfs/
+      version: ^0.17.1
+    description: A Key-Value store containing the Gaffer iterators for rapid filtering and lookup
+    digest: 1a1746105efd127b85c5eefdeb8c9ad4fc50665e3f17076a0717be250a72a3f9
+    home: https://github.com/gchq/Gaffer
+    name: accumulo
+    sources:
+    - https://github.com/K-itKat20/gaffer-helm-repo
+    type: application
+    urls:
+    - https://github.com/K-itKat20/gaffer-helm-repo/releases/download/accumulo-0.17.1/accumulo-0.17.1.tgz
+    version: 0.17.1
+  gaffer:
+  - apiVersion: v2
+    appVersion: 1.21.1
+    created: "2022-02-01T10:06:00.072293191Z"
+    dependencies:
+    - condition: accumulo.enabled
+      name: accumulo
+      repository: file://../accumulo/
+      version: ^0.17.1
+    description: A large-scale entity and relation database supporting aggregation of properties
+    digest: 9f5c2b1b93c19efbeea0fc2f6473bc2479a5cdfbfc3bde45bb1350c468face05
+    home: https://github.com/gchq/Gaffer
+    name: gaffer
+    sources:
+    - https://github.com/K-itKat20/gaffer-helm-repo
+    type: application
+    urls:
+    - https://github.com/K-itKat20/gaffer-helm-repo/releases/download/gaffer-0.17.1/gaffer-0.17.1.tgz
+    version: 0.17.1
+  gaffer-road-traffic:
+  - apiVersion: v2
+    appVersion: 1.21.1
+    created: "2022-02-01T10:06:00.26648102Z"
+    dependencies:
+    - name: gaffer
+      repository: file://../gaffer/
+      version: ^0.17.1
+    description: A Gaffer instance containing sample GB road traffic data from the Department of Transport
+    digest: 16d1af0d92119cab37f08dc9af07ad8b81c73f300389d51076df658bfbe96109
+    home: https://github.com/gchq/Gaffer
+    name: gaffer-road-traffic
+    sources:
+    - https://github.com/K-itKat20/gaffer-helm-repo
+    - https://data.gov.uk/dataset/208c0e7b-353f-4e2d-8b7a-1a7118467acc/gb-road-traffic-counts
+    type: application
+    urls:
+    - https://github.com/K-itKat20/gaffer-helm-repo/releases/download/gaffer-road-traffic-0.17.1/gaffer-road-traffic-0.17.1.tgz
+    version: 0.17.1
+  hdfs:
+  - apiVersion: v2
+    appVersion: 3.2.1
+    created: "2022-02-01T10:06:00.465426076Z"
+    description: Deploys the Hadoop Distributed File System (HDFS)
+    digest: 28d506ece01ab06ab7d1a948a4f9ecb6187877114716647e7466ff4013afcd52
+    name: hdfs
+    type: application
+    urls:
+    - https://github.com/K-itKat20/gaffer-helm-repo/releases/download/hdfs-0.17.1/hdfs-0.17.1.tgz
+    version: 0.17.1
+generated: "2022-02-01T10:05:59.652806454Z"
