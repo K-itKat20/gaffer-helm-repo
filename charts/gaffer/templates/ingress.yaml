@@ -29,9 +29,6 @@ metadata:
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
-  tlsSecurityProfile:
-    intermediate: {}
-    type: Intermediate
   rules:
   - http:
       paths:
