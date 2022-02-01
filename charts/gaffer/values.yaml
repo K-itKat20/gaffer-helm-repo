@@ -59,10 +59,10 @@ api:
     pullSecrets: []
   resources:
     requests:
-      memory: "500Mi"
+      memory: "300Mi"
       cpu: "500m"
     limits:
-      memory: "500Mi"
+      memory: "300Mi"
       cpu: "500m"
   nodeSelector: {}
   tolerations: []
