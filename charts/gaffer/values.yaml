@@ -57,7 +57,13 @@ api:
     tag: 1.21.1
     pullPolicy: IfNotPresent
     pullSecrets: []
-  resources: {}
+  resources:
+    requests:
+      memory: "1Gi"
+      cpu: "1000m"
+    limits:
+      memory: "1Gi"
+      cpu: "1000m"
   nodeSelector: {}
   tolerations: []
   affinity: {}
