@@ -10,7 +10,7 @@ spec:
     name: { include "gaffer.fullname" . }}-ui
     weight: 100
   port:
-    targetPort: http
+    targetPort: 80
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
