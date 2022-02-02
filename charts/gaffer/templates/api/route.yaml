@@ -1,18 +1,18 @@
-apiVersion: route.openshift.io/v1
-kind: Route
-metadata:
-  name: {{ include "gaffer.fullname" . }}-api-route
-  labels:
-    {{- include "gaffer.labels" . | nindent 4 }}
-spec:
-  to:
-    kind: Service
-    name: {{ include "gaffer.fullname" . }}-api
-    weight: 100
-  port:
-    targetPort: http
-  tls:
-    termination: edge
-    insecureEdgeTerminationPolicy: Redirect
-  wildcardPolicy: None
-  path: "/rest"
+#apiVersion: route.openshift.io/v1
+#kind: Route
+#metadata:
+#  name: {{ include "gaffer.fullname" . }}-api-route
+#  labels:
+#    {{- include "gaffer.labels" . | nindent 4 }}
+#spec:
+#  to:
+#    kind: Service
+#    name: {{ include "gaffer.fullname" . }}-api
+#    weight: 100
+#  port:
+#    targetPort: http
+#  tls:
+#    termination: edge
+#    insecureEdgeTerminationPolicy: Redirect
+#  wildcardPolicy: None
+#  path: "/rest"
