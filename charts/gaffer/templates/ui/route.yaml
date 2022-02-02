@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "gaffer.labels" . | nindent 4 }}
 spec:
-  host: {{ include "gaffer.fullname" . }}-{{ .Values.namespace}}.{{ .Values.ingressSuffix}}
+  host: myhostname.example.com
   to:
     kind: Service
     name: {{ include "gaffer.fullname" . }}-ui
