@@ -21,8 +21,8 @@ appVersion: 1.21.1
 home: https://github.com/gchq/Gaffer
 sources:
 - https://github.com/K-itKat20/gaffer-helm-repo
-dependencies:
-- name: accumulo
-  version: ^0.17.1 # managed version
-  repository: file://../accumulo/
-  condition: accumulo.enabled
+#dependencies:
+#- name: accumulo
+#  version: ^0.17.1 # managed version
+#  repository: file://../accumulo/
+#  condition: accumulo.enabled
