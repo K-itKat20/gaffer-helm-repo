@@ -5,7 +5,8 @@ metadata:
   labels:
     {{- include "gaffer.labels" . | nindent 4 }}
 spec:
-  host: myhostname.example.com
+  host: >-
+    didtherepowork22.example.k8s.com
   to:
     kind: Service
     name: {{ include "gaffer.fullname" . }}-ui
