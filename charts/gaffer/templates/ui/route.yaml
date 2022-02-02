@@ -5,7 +5,7 @@ metadata:
   labels:
     {{- include "gaffer.labels" . | nindent 4 }}
 spec:
-  host: ourgraph.korat-cluster-7c309b11fc78649918d0c8b91bcb5925-0000.eu-gb.containers.appdomain.cloud
+  host: somerandomname
   to:
     kind: Service
     name: {{ include "gaffer.fullname" . }}-ui
