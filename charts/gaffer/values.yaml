@@ -14,8 +14,8 @@
 
 nameOverride: ""
 fullnameOverride: ""
-ingressSuffix: ""
-namespace: ""
+creator: ""
+
 
 graph:
   config:
