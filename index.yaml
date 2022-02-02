@@ -27,6 +27,25 @@ entries:
   gaffer:
   - apiVersion: v2
     appVersion: 1.21.1
+    created: "2022-02-02T11:36:42.646192575Z"
+    dependencies:
+    - condition: accumulo.enabled
+      name: accumulo
+      repository: file://../accumulo/
+      version: ^0.17.1
+    description: A large-scale entity and relation database supporting aggregation
+      of properties
+    digest: 990cb22959bb9b89c8d2f0d74554613a0aeb1020936a2c62479d15c3cbb3cc57
+    home: https://github.com/gchq/Gaffer
+    name: gaffer
+    sources:
+    - https://github.com/K-itKat20/gaffer-helm-repo
+    type: application
+    urls:
+    - https://github.com/K-itKat20/gaffer-helm-repo/releases/download/gaffer-0.17.25/gaffer-0.17.25.tgz
+    version: 0.17.25
+  - apiVersion: v2
+    appVersion: 1.21.1
     created: "2022-02-02T11:02:29.515130991Z"
     dependencies:
     - condition: accumulo.enabled
@@ -512,4 +531,4 @@ entries:
     urls:
     - https://github.com/K-itKat20/gaffer-helm-repo/releases/download/hdfs-0.17.1/hdfs-0.17.1.tgz
     version: 0.17.1
-generated: "2022-02-02T11:02:29.515645411Z"
+generated: "2022-02-02T11:36:42.646575877Z"
