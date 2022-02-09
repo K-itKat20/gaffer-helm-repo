@@ -14,7 +14,7 @@
 
 nameOverride: ""
 fullnameOverride: ""
-creator: ""
+creator: "undefined"
 
 
 graph:
