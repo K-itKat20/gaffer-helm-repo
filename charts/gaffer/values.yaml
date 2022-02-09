@@ -82,8 +82,8 @@ ingress:
     traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
   host: ""
   pathPrefix:
-    ui: /ui/(.*)
-    api: /rest/(.*)
+    ui: /ui/
+    api: /rest/
 
 waitFor:
   graphStatusOk: true
