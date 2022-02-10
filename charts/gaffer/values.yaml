@@ -79,7 +79,7 @@ api:
 ingress:
   enabled: true
   annotations:
-    traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
+    route.openshift.io/termination: edge
   host: ""
   pathPrefix:
     ui: /ui/(.*)
