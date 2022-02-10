@@ -24,7 +24,6 @@ metadata:
   labels:
     {{- include "gaffer.labels" . | nindent 4 }}
     app.kubernetes.io/component: gaffer-app
-  {{- with .Values.ingress.annotations }}
   annotations:
     route.openshift.io/termination: edge
     {{- toYaml . | nindent 4 }}
