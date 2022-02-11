@@ -16,7 +16,6 @@ nameOverride: ""
 fullnameOverride: ""
 creator: "undefined"
 
-
 graph:
   config:
     graphId: "simpleGraph"
@@ -48,11 +47,11 @@ ui:
   replicaCount: 1
   resources:
     requests:
-      memory: "300Mi"
-      cpu: "200m"
+      memory: "350Mi"
+      cpu: "100m"
     limits:
-      memory: "300Mi"
-      cpu: "200m"
+      memory: "600Mi"
+      cpu: "500m"
   nodeSelector: {}
   tolerations: []
   affinity: {}
@@ -67,8 +66,8 @@ api:
     pullSecrets: []
   resources:
     requests:
-      memory: "700Mi"
-      cpu: "700m"
+      memory: "400Mi"
+      cpu: "300m"
     limits:
       memory: "700Mi"
       cpu: "700m"
