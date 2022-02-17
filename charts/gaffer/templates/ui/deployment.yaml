@@ -16,12 +16,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "gaffer.fullname" . }}-ui
+  {{- with .Values.labels }}
   labels:
     {{- include "gaffer.labels" . | nindent 4 }}
-    {{- with .Values.labels }}
-      {{ toYaml . | indent 4 }}
-    {{- end }}
+    {{ toYaml . | indent 4 }}
     app.kubernetes.io/component: ui
+  {{- end }}
 spec:
   replicas: {{ .Values.ui.replicaCount }}
   selector:
