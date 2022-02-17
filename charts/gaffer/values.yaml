@@ -14,7 +14,9 @@
 
 nameOverride: ""
 fullnameOverride: ""
-creator: "undefined"
+
+labels:
+  creator: ""
 
 graph:
   config:
