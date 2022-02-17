@@ -18,7 +18,7 @@ metadata:
   name: {{ include "gaffer.fullname" . }}-api
   labels:
     {{- include "gaffer.labels" . | nindent 4 }}
-    {{ .Values.labels}}
+    {{- include .Values.labels}}
     app.kubernetes.io/component: api
 spec:
   replicas: {{ .Values.api.replicaCount }}
