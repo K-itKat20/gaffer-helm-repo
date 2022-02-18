@@ -19,6 +19,7 @@ metadata:
   labels:
     {{- include "gaffer.labels" . | nindent 4 }}
     app.kubernetes.io/component: api
+    {{- toYaml .Values.labels | nindent 4 }}
 spec:
   replicas: {{ .Values.api.replicaCount }}
   selector:
