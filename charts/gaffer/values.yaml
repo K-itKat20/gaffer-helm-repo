@@ -15,8 +15,7 @@
 nameOverride: ""
 fullnameOverride: ""
 
-labels:
-  creator: ""
+labels: {}
 
 graph:
   config:
