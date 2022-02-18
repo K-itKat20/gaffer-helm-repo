@@ -18,10 +18,10 @@ metadata:
   name: {{ include "gaffer.fullname" . }}-api
   {{- with .Values.labels }}
   labels:
-    {{- include "gaffer.labels" . | nindent 4 }}
     {{ toYaml . | indent 4 }}
+    {{- end }}
+    {{- include "gaffer.labels" . | nindent 4 }}
     app.kubernetes.io/component: api
-  {{- end }}
 spec:
   replicas: {{ .Values.api.replicaCount }}
   selector:
