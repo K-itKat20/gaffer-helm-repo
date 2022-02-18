@@ -17,9 +17,11 @@ kind: Deployment
 metadata:
   name: {{ include "gaffer.fullname" . }}-ui
   labels:
-    {{ .Values.labels }}
-    {{- include "gaffer.labels" . | nindent 4 }}
-    app.kubernetes.io/component: ui
+      {{- include "gaffer.labels" . | nindent 4 }}
+      app.kubernetes.io/component: ui
+    {{- with .Values.labels }}
+      {{ toYaml . | indent 4 }}
+    {{- end }}
 spec:
   replicas: {{ .Values.ui.replicaCount }}
   selector:
