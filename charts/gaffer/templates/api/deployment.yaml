@@ -32,7 +32,6 @@ spec:
         {{- include "gaffer.selectorLabels" . | nindent 8 }}
         app.kubernetes.io/component: api
         {{ toYaml . | indent 4 }}
-      {{- end }}
       annotations:
         checksum/graph-config: {{ include (print $.Template.BasePath "/api/config/graph-config.yaml") . | sha256sum }}
         checksum/schema: {{ include (print $.Template.BasePath "/api/config/schema.yaml") . | sha256sum }}
@@ -94,6 +93,7 @@ spec:
       - name: {{ . }}
       {{- end }}
       {{- end }}
+      {{- end}}
       volumes:
       - name: graph-config
         configMap:
