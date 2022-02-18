@@ -16,7 +16,7 @@ apiVersion: v2
 name: gaffer
 description: A large-scale entity and relation database supporting aggregation of properties
 type: application
-version: 0.17.53 # managed version
+version: 0.17.54 # managed version
 appVersion: 1.21.1
 home: https://github.com/gchq/Gaffer
 sources:

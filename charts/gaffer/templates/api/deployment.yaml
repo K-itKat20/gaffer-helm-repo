@@ -27,12 +27,12 @@ spec:
       app.kubernetes.io/component: api
   template:
     metadata:
+      {{- with .Values.labels }}
       labels:
-          {{- include "gaffer.selectorLabels" . | nindent 8 }}
-          app.kubernetes.io/component: api
-        {{- with .Values.labels }}
-          {{ toYaml . | indent 4 }}
-        {{- end }}
+        {{- include "gaffer.selectorLabels" . | nindent 8 }}
+        app.kubernetes.io/component: api
+        {{ toYaml . | indent 4 }}
+      {{- end }}
       annotations:
         checksum/graph-config: {{ include (print $.Template.BasePath "/api/config/graph-config.yaml") . | sha256sum }}
         checksum/schema: {{ include (print $.Template.BasePath "/api/config/schema.yaml") . | sha256sum }}
