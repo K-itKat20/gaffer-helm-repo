@@ -16,10 +16,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "gaffer.fullname" . }}-api
-  {{- with .Values.labels }}
   labels:
-    {{ toYaml . | indent 4 }}
-    {{- end }}
+    {{ .Values.labels }}
     {{- include "gaffer.labels" . | nindent 4 }}
     app.kubernetes.io/component: api
 spec:
