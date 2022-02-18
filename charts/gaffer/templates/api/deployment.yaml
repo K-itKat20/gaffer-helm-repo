@@ -19,9 +19,6 @@ metadata:
   labels:
     {{- include "gaffer.labels" . | nindent 4 }}
     app.kubernetes.io/component: api
-    {{- with .Values.labels }}
-    {{ toYaml . | indent 4 }}
-    {{- end }}
 spec:
   replicas: {{ .Values.api.replicaCount }}
   selector:
