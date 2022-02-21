@@ -78,8 +78,9 @@ api:
 
 ingress:
   enabled: true
-  annotations:
+  annotations: {
     traefik.ingress.kubernetes.io/rule-type: PathPrefixStrip
+  }
   host: ""
   pathPrefix:
     ui: /ui/(.*)
